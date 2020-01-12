@@ -15,4 +15,5 @@ Consumers who are working on TSI Query would be able to get series, aggregate se
 TO DO: 
 
 1.In the Testcontroller.cs file, you need to replace the value of the client id, secret and tenant id of your organiation. 
+
 2. Build the solution and run it. 
