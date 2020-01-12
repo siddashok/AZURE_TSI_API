@@ -20,7 +20,7 @@ namespace Microsoft.Azure.TimeSeriesInsights.Models
     /// be reconstructed using interpolation.
     /// </summary>
     [Newtonsoft.Json.JsonObject("numeric")]
-    public partial class NumericVariable 
+    public partial class NumericVariable : Variable
     {
         /// <summary>
         /// Initializes a new instance of the NumericVariable class.
@@ -46,15 +46,18 @@ namespace Microsoft.Azure.TimeSeriesInsights.Models
         /// <param name="filter">Filter over the events that restricts the
         /// number of events being considered for computation. Example:
         /// "$event.Status.String='Good'". Optional.</param>
-        
-            
-        //public NumericVariable(Tsx aggregation,Tsx value = default(Tsx),  Tsx filter = default(Tsx))
-           
-        //{
-        //    Value = value;
-        //    Aggregation = aggregation;
-        //    CustomInit();
-        //}
+
+
+        public NumericVariable(Tsx aggregation, Tsx value = default(Tsx), Tsx filter = default(Tsx))
+
+
+        {
+            Value = value;
+            Aggregation = aggregation;
+            Filter = filter;
+            CustomInit();
+
+        }
 
 
 

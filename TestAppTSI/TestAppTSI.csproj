@@ -453,15 +453,14 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\PublishProfiles\zneudl0n23tsi001api-zneudl0n23tsi001api-staging - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\zneudl0n23tsiapi001-Staging - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\zneudl0n23tsiapi001-Staging - Web Deploy1.pubxml" />
-    <None Include="Properties\PublishProfiles\zneudl0n23tsiapi001-Staging - Web Deploy2.pubxml" />
+    <None Include="Properties\PublishProfiles\zneudl0n14udl01-api-Staging - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\zneudl0n14udl01-api-Staging - Web Deploy1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

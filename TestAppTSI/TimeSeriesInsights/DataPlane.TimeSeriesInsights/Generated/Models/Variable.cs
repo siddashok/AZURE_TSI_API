@@ -37,11 +37,11 @@ namespace Microsoft.Azure.TimeSeriesInsights.Models
         /// <param name="filter">Filter over the events that restricts the
         /// number of events being considered for computation. Example:
         /// "$event.Status.String='Good'". Optional.</param>
-        public Variable( Tsx filter = default(Tsx))
+        public Variable(Tsx value, Tsx aggregation, Tsx filter = default(Tsx))
         {
-          
-            Filter = filter;
-           // Kind = kind;
+
+            Value = value;
+            Aggregation = aggregation;
             CustomInit();
         }
 
@@ -58,12 +58,18 @@ namespace Microsoft.Azure.TimeSeriesInsights.Models
         [JsonProperty(PropertyName = "filter")]
         public Tsx Filter { get; set; }
 
-       
+
+        [JsonProperty(PropertyName = "value")]
+        public Tsx Value { get; set; }
+
+
+        [JsonProperty(PropertyName = "aggregation")]
+        public Tsx Aggregation { get; set; }
 
         //[JsonProperty(PropertyName = "kind")]
         //public string Kind { get; set; }
 
-      
+
 
         /// <summary>
         /// Validate the object.

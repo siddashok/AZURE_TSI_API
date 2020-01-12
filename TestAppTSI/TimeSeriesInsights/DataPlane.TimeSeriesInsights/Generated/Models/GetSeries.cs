@@ -22,6 +22,9 @@ namespace Microsoft.Azure.TimeSeriesInsights.Models
     /// </summary>
     public partial class GetSeries
     {
+        private object filter;
+        private Dictionary<string, NumericVariable> inlineVariables;
+
         /// <summary>
         /// Initializes a new instance of the GetSeries class.
         /// </summary>
@@ -62,6 +65,15 @@ namespace Microsoft.Azure.TimeSeriesInsights.Models
             ProjectedVariables = projectedVariables;
             InlineVariables = inlineVariables;
             CustomInit();
+        }
+
+        public GetSeries(object[] timeSeriesId, DateTimeRange searchSpan, object filter, string[] projectedVariables, Dictionary<string, NumericVariable> inlineVariables)
+        {
+            TimeSeriesId = timeSeriesId;
+            SearchSpan = searchSpan;
+            this.filter = filter;
+            ProjectedVariables = projectedVariables;
+            this.inlineVariables = inlineVariables;
         }
 
         /// <summary>
