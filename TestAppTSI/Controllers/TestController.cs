@@ -25,7 +25,7 @@ namespace TestAppTSI.Controllers
             do
             {
                 DateTimeRange SearchSpan = new DateTimeRange(new DateTime(2019, 12, 26).ToUniversalTime(), new DateTime(2019, 12, 27).ToUniversalTime());
-                //object[] TimeSeriesIdValue = new object[] { "AND-ARU-XI82121_F" };
+                //object[] TimeSeriesIdValue = new object[] { "<tag name>" };
                 QueryResultPage queryResponse = await tsi.ExecuteQueryPagedAsync(
                         new QueryRequest(
                             getSeries: new GetSeries(
@@ -58,7 +58,7 @@ namespace TestAppTSI.Controllers
             do
             {
                 DateTimeRange SearchSpan = new DateTimeRange(new DateTime(2019, 12, 26).ToUniversalTime(), new DateTime(2019, 12, 27).ToUniversalTime());
-                //object[] TimeSeriesIdValue = new object[] { "AND-ARU-XI82121_F" };
+                //object[] TimeSeriesIdValue = new object[] { "<tag name>" };
                 QueryResultPage queryResponse = await tsi.ExecuteQueryPagedAsync(
                         new QueryRequest(
                         aggregateSeries: new AggregateSeries(
@@ -107,7 +107,7 @@ namespace TestAppTSI.Controllers
             do
             {
                 DateTimeRange SearchSpan = new DateTimeRange(new DateTime(2019, 12, 26).ToUniversalTime(), new DateTime(2019, 12, 27).ToUniversalTime());
-                //object[] TimeSeriesIdValue = new object[] { "AND-ARU-XI82121_F" };
+                //object[] TimeSeriesIdValue = new object[] { "<tag name>" };
                 QueryResultPage queryResponse = await tsi.ExecuteQueryPagedAsync(
                         new QueryRequest(
                             getSeries: new GetSeries(
@@ -251,8 +251,8 @@ namespace TestAppTSI.Controllers
 
             //string hostName = Dns.GetHostName();
             //string myIP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
-            System.Web.HttpContext context1 = System.Web.HttpContext.Current;
-            string ipAddress = context1.Request.ServerVariables["REMOTE_ADDR"];
+           // System.Web.HttpContext context1 = System.Web.HttpContext.Current;
+           // string ipAddress = context1.Request.ServerVariables["REMOTE_ADDR"];
 
             ClientCredential ClientCredential = new ClientCredential(PowerShellAadClientId, PowerShellAadClientSecret);
             AuthenticationContext context = new AuthenticationContext($"{AzureActiveDirectoryLoginUrl}/{MicrosoftTenantId}", TokenCache.DefaultShared);
